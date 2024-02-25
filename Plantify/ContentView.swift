@@ -12,33 +12,48 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            VStack {
-                HStack{
-                    Text("Watering")
-                        .font(.title.bold())
-                    Spacer()
-                    NavigationLink(destination: SeeAll(), label: {
-                        Text("See All")
-                            .font(.system(size: 12))
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            ZStack{
+                VStack {
+                    HStack{
+                        Text("Watering")
+                            .font(.title2.bold())
+                        
+                        Spacer()
+                        NavigationLink(destination: SeeAll(), label: {
+                            Text("See All")
+                                .font(.system(size: 12))
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            
+                        })
+                    }
                     
-                    })
+                    VStack{
+                        Picker("",selection: $segmentedChoice){
+                            Text("Today").tag(0)
+                            Text("Next Week").tag(1)
+                            Text("Overdue").tag(2)
+                        }
+                        .pickerStyle(.segmented)
+                        
+                    }
+                    
+                    if (var plantCardViewModel: PlantCardViewModel)
+
+                    
+                }
+                .padding()
+                .navigationBarTitle("My Plants")
+                .toolbarBackground(.visible)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        NavigationLink("", destination: ContentView())
+                    }
                 }
             }
-            VStack{
-                Picker("",selection: $segmentedChoice){
-                    Text("Today").tag(0)
-                    Text("Next Week").tag(1)
-                    Text("Over").tag(2)
-                }
-                .pickerStyle(.segmented)
-            }
-            .padding()
         }
-        
-
-
     }
+
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = .backgroundButtons
         
@@ -47,7 +62,6 @@ struct ContentView: View {
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.bodyText], for: .normal)
     }
 }
-
 #Preview {
     ContentView()
 }

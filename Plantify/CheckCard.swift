@@ -5,4 +5,10 @@
 //  Created by Norah Aldughem on 09/08/1445 AH.
 //
 
-import Foundation
+struct CheckCard : Hashable{
+    var PlantName:String
+    var PlantType : PlantCardViewModel.PlantTypes
+    var Watring : Int
+}
+
+

@@ -1,18 +1,66 @@
 //
-//  CV.swift
+//  ContentView.swift
 //  Plantify
 //
-//  Created by Norah Aldughem on 09/08/1445 AH.
+//  Created by Norah Aldughem on 04/08/1445 AH.
 //
 
 import SwiftUI
 
-struct CV: View {
+struct ContentView: View {
+    @State var segmentedChoice = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    CV()
-}
+        NavigationStack{
+            ScrollView{
+                VStack {
+                    HStack{
+                        Text("Watering")
+                        // posztion in x
+                        //                        .offset(x:20)
+                            .font(.title.bold())
+                        Spacer()
+                        NavigationLink(destination: SeeAll(), label: {
+                            Text("See All")
+                            //                            .offset(x:-20)
+                                .font(.system(size: 12))
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            
+                        })
+                    }.padding()
+                }
+                VStack{
+                    Picker("",selection: $segmentedChoice){
+                        Text("Today").tag(0)
+                        Text("Next Week").tag(1)
+                        Text("Overdue").tag(2)
+                    }
+                    .pickerStyle(.segmented)
+                }
+                ///.padding()
+                .navigationBarTitle("My Plants")
+                .toolbarBackground(.visible)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        NavigationLink(destination: ContentView())
+                    }
+                    
+                    
+                    
+                    
+                }
+                
+                init() {
+                    UISegmentedControl.appearance().selectedSegmentTintColor = .backgroundButtons
+                    
+                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.screenBackground], for: .selected)
+                    
+                    UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.bodyText], for: .normal)
+                }
+            }
+            
+            #Preview {
+                ContentView()
+            }
+        }
