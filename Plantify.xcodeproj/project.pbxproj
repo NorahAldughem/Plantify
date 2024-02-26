@@ -28,6 +28,7 @@
 		28A7128E2B84E457008FA4FC /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A7128D2B84E457008FA4FC /* AppIntent.swift */; };
 		28A712902B84E458008FA4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A7128F2B84E458008FA4FC /* Assets.xcassets */; };
 		28A712942B84E458008FA4FC /* PlantifyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 28A712822B84E457008FA4FC /* PlantifyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28A7129A2B8B871B008FA4FC /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A712992B8B871B008FA4FC /* Sheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		28A7128D2B84E457008FA4FC /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		28A7128F2B84E458008FA4FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A712912B84E458008FA4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28A712992B8B871B008FA4FC /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				2878D7E52B7CF991008CDDA5 /* PlantifyApp.swift */,
 				2878D7E72B7CF991008CDDA5 /* ContentView.swift */,
 				28A7126C2B823B03008FA4FC /* SeeAll.swift */,
+				28A712992B8B871B008FA4FC /* Sheet.swift */,
 				28A712702B83A492008FA4FC /* PlantCard.swift */,
 				2878D7E92B7CF992008CDDA5 /* Assets.xcassets */,
 				28A712722B83A61A008FA4FC /* PlantCardView.swift */,
@@ -383,6 +386,7 @@
 				28A7127B2B83ADE8008FA4FC /* CheckCardView.swift in Sources */,
 				2878D7E82B7CF991008CDDA5 /* ContentView.swift in Sources */,
 				28A712732B83A61A008FA4FC /* PlantCardView.swift in Sources */,
+				28A7129A2B8B871B008FA4FC /* Sheet.swift in Sources */,
 				2878D7E62B7CF991008CDDA5 /* PlantifyApp.swift in Sources */,
 				28A712752B83AC77008FA4FC /* PlantCardViewModel .swift in Sources */,
 				28A7126D2B823B03008FA4FC /* SeeAll.swift in Sources */,
